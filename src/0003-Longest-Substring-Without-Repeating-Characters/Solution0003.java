@@ -8,26 +8,9 @@ import java.util.Set;
  */
 public class Solution0003 {
 
-    public static void main(String[] args) {
-        int result = new Solution0003().lengthOfLongestSubstring("abcabcbb");
-        System.out.println(result == 3);
-        result = new Solution0003().lengthOfLongestSubstring("bbbbb");
-        System.out.println(result == 1);
-        result = new Solution0003().lengthOfLongestSubstring("pwwkew");
-        System.out.println(result == 3);
-        result = new Solution0003().lengthOfLongestSubstring("dvdf");
-        System.out.println(result == 3);
-        result = new Solution0003().lengthOfLongestSubstring("dsvdf");
-        System.out.println(result == 4);
-        result = new Solution0003().lengthOfLongestSubstring("tmmzuxt");
-        System.out.println(result == 5);
-        result = new Solution0003().lengthOfLongestSubstring("bpfbhmipx");
-        System.out.println(result == 7);
-    }
-
     /**
      * 维护一个charRecordSet用来记录当前字符串有没有重复，
-     * 从l = 0, r = 0开始循环，每次使 r 自增，当遇到重复的字符，就把l的index赋值给r 重新循环
+     * 从l = 0, r = 0开始循环，每次使 r 自增，当遇到重复的字符，就把l ++ 的index赋值给r 重新循环
      */
     public int lengthOfLongestSubstring(String s) {
         Set<Character> charRecordSet = new HashSet<>();
