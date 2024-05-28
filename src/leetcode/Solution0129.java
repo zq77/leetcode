@@ -1,3 +1,7 @@
+package leetcode;
+
+import common.TreeNode;
+
 /**
  * 示例 1：
  *
@@ -39,16 +43,4 @@ public class Solution0129 {
         return deep(node.left, sum) + deep(node.right, sum);
     }
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 }

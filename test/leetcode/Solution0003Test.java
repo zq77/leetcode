@@ -1,3 +1,6 @@
+package leetcode;
+
+import leetcode.Solution0003;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
