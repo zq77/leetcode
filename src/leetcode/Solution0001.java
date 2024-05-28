@@ -29,9 +29,28 @@ public class Solution0001 {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{4,19,14,5,-3,1,8,5,11,15};
-        int[] newArr = mergeSort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.stream(newArr).boxed().collect(Collectors.toList()));
+        String s = "aabcccccaaa";
+        final char[] charArray = s.toCharArray();
+        StringBuilder builder = new StringBuilder();
+        builder.append(charArray[0]);
+        char temp = charArray[0];
+        int flag = 1;
+        for (int i = 1; i < charArray.length; i ++) {
+            if (charArray[i] == temp) {
+                flag ++;
+            } else {
+                builder.append(flag).append(charArray[i]);
+                temp = charArray[i];
+                flag = 1;
+            }
+        }
+        builder.append(flag);
+
+        System.out.println("a2b1c5a3".equals(builder.toString()));
+        System.out.println(builder.toString());
+//        int[] arr = new int[]{4,19,14,5,-3,1,8,5,11,15};
+//        int[] newArr = mergeSort(arr, 0, arr.length - 1);
+//        System.out.println(Arrays.stream(newArr).boxed().collect(Collectors.toList()));
     }
 
     private static int[] mergeSort(int[] arr, int left, int right) {
