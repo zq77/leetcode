@@ -1,5 +1,6 @@
 package leetcode;
 
+import common.TreeNode;
 import leetcode.Solution0129;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,19 +15,19 @@ public class Solution0129Test {
     }
     @Test
     public void test1() {
-        Solution0129.TreeNode left = new Solution0129.TreeNode(2);
-        Solution0129.TreeNode right = new Solution0129.TreeNode(3);
-        Solution0129.TreeNode treeNode = new Solution0129.TreeNode(1, left, right);
+        TreeNode left = new TreeNode(2);
+        TreeNode right = new TreeNode(3);
+        TreeNode treeNode = new TreeNode(1, left, right);
         int result = solution.sumNumbers(treeNode);
         assertEquals(25, result);
     }
     @Test
     public void test2() {
-        Solution0129.TreeNode left2 = new Solution0129.TreeNode(5);
-        Solution0129.TreeNode right = new Solution0129.TreeNode(1);
-        Solution0129.TreeNode left = new Solution0129.TreeNode(9, left2, right);
+        TreeNode left2 = new TreeNode(5);
+        TreeNode right = new TreeNode(1);
+        TreeNode left = new TreeNode(9, left2, right);
 
-        Solution0129.TreeNode treeNode = new Solution0129.TreeNode(4, left, new Solution0129.TreeNode(0));
+        TreeNode treeNode = new TreeNode(4, left, new TreeNode(0));
         int result = solution.sumNumbers(treeNode);
         assertEquals(1026, result);
     }

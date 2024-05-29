@@ -1,5 +1,6 @@
 package leetcode;
 
+import common.TreeNode;
 import leetcode.Solution0102;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,16 +18,16 @@ public class Solution0102Test {
     }
     @Test
     public void test1() {
-        Solution0102.TreeNode right = new Solution0102.TreeNode(20, new Solution0102.TreeNode(15), new Solution0102.TreeNode(7));
-        Solution0102.TreeNode left = new Solution0102.TreeNode(9);
-        Solution0102.TreeNode treeNode = new Solution0102.TreeNode(3, left, right);
+        TreeNode right = new TreeNode(20, new TreeNode(15), new TreeNode(7));
+        TreeNode left = new TreeNode(9);
+        TreeNode treeNode = new TreeNode(3, left, right);
         final List<List<Integer>> lists = solution.levelOrder(treeNode);
         assertEquals("[[3], [9, 20], [15, 7]]", Arrays.toString(lists.toArray()));
     }
     @Test
     public void test2() {
 
-        Solution0102.TreeNode treeNode = new Solution0102.TreeNode(1);
+        TreeNode treeNode = new TreeNode(1);
         final List<List<Integer>> lists = solution.levelOrder(treeNode);
         assertEquals("[[1]]", Arrays.toString(lists.toArray()));
     }
